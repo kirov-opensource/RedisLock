@@ -1,0 +1,1 @@
+dotnet pack Kirov.RedisLock\Kirov.RedisLock.csproj --output nupkgs --configuration Release

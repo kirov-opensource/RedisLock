@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kirov.RedisLock", "Kirov.RedisLock\Kirov.RedisLock.csproj", "{D8F1A619-7A5D-422B-B54E-14E104B112D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kirov.RedisLock.Tests", "Kirov.RedisLock.Tests\Kirov.RedisLock.Tests.csproj", "{EDE4F938-21A8-4EE9-9413-3704E0474869}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8F1A619-7A5D-422B-B54E-14E104B112D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8F1A619-7A5D-422B-B54E-14E104B112D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8F1A619-7A5D-422B-B54E-14E104B112D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8F1A619-7A5D-422B-B54E-14E104B112D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDE4F938-21A8-4EE9-9413-3704E0474869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE4F938-21A8-4EE9-9413-3704E0474869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE4F938-21A8-4EE9-9413-3704E0474869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE4F938-21A8-4EE9-9413-3704E0474869}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A0975C8-0A0F-4DA3-B0EC-60782B6BE81E}
+	EndGlobalSection
+EndGlobal
