@@ -7,12 +7,12 @@
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/kirov-opensource/Kirov.RedisLock.svg?style=flat-square&logo=github)
 ![GitHub top language](https://img.shields.io/github/languages/top/kirov-opensource/Kirov.RedisLock.svg?style=flat-square&logo=github)
 
-The blocking implementation of StackExchange.Redis LockTake and the automatic release of locks.
+StackExchange.Redis LockTake 的阻塞实现和锁的自动释放。
 
-* [中文](./README_CN.md)
+* [English](./README.md)
 
 ### How to use
-* Introducing `Kirov.RedisLock` in the nuget.
+* 从 `nuget` 引入 `Kirov.RedisLock` 包.
 
 ```csharp
 public class Example
@@ -25,25 +25,25 @@ public class Example
 
     public async Task ExampleFunction()
     {
-        // Waiting for lock acquisition.
+        // 等待锁获取。
         await using (await _redisDatabase.BlockLockTakeAsync("key", "value"))
         {
-            // Your code here.
+            // 同步区间的代码。
         }
     }
 }
 ```
-Don't care about the release timing of the lock at all, it will be automatically released at the end of the using method block. It also has several overloaded methods: 
+完全不用关心锁的释放时机，在 using 方法块结束时会自动释放。它还有一些重载方法：
 ```csharp
-// This will cause the lock to be released after 3 minute, even if the using does not release the lock (actually, it passes the parameter to IDatabase.LockTakeAsync(expiry)).
+// 这将导致锁在 3 分钟后被释放，即使 using 没有释放锁 (实际上，它只是将参数传递给 IDatabase.LockTakeAsync(expiry))。
 BlockLockTakeAsync("key", "value", TimeSpan.FromMinutes(3));
 
-// This will cause the lock to be released after 3 minute.
-// If the lock is not acquired, try to acquire it again every 200ms.
-// This parameter is actually the default value of BlockLockTakeAsync().
+// 锁在最多在三分钟后被释放。
+// 如果没有获得锁，则每 200 毫秒再次尝试获得锁。
+// 这个参数配置是 BlockLockTakeAsync() 方法的默认值。
 BlockLockTakeAsync("key", "value", TimeSpan.FromMinutes(3), TimeSpan.FromMilliseconds(200));
 
-// Wait up to 5000 milliseconds when trying to acquire a lock, throw OperationCanceledException if the timeout expires.
+// 获取锁时最多等待 5000 毫秒，超时则抛出 OperationCanceledException。
 var cts = new CancellationTokenSource(5000);
 BlockLockTakeAsync("key", "value", cts.Token);
 
