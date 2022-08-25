@@ -2,7 +2,6 @@
 [![NuGet](https://img.shields.io/nuget/v/Kirov.RedisLock.svg?style=flat-square&logo=nuget)](https://www.nuget.org/packages/Kirov.RedisLock)
 [![Publish Workflow](https://github.com/kirov-opensource/Kirov.RedisLock/actions/workflows/publish.yml/badge.svg)](https://github.com/kirov-opensource/Kirov.RedisLock/actions/workflows/publish.yml)
 [![NuGet](https://img.shields.io/nuget/dt/Kirov.RedisLock?logo=nuget&style=flat-square)](https://www.nuget.org/packages/Kirov.RedisLock)
-[![Publish Workflow](https://github.com/kirov-opensource/Kirov.RedisLock/actions/workflows/publish.yml/badge.svg)](https://github.com/kirov-opensource/Kirov.RedisLock/actions/workflows/publish.yml)
 [![GitHub issues](https://img.shields.io/github/issues/kirov-opensource/Kirov.RedisLock.svg?style=flat-square&logo=github)](https://github.com/kirov-opensource/Kirov.RedisLock/issues)
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/kirov-opensource/Kirov.RedisLock.svg?style=flat-square&logo=github)
 ![GitHub top language](https://img.shields.io/github/languages/top/kirov-opensource/Kirov.RedisLock.svg?style=flat-square&logo=github)
