@@ -105,8 +105,8 @@ namespace Kirov.RedisLock
             cancellationToken.ThrowIfCancellationRequested();
             while (!await _database.LockTakeAsync(_redisKey, _redisValue, keyExpiry, flags).ConfigureAwait(false))
             {
+                await Task.Delay(delay, cancellationToken).ConfigureAwait(false);
                 cancellationToken.ThrowIfCancellationRequested();
-                await Task.Delay(delay).ConfigureAwait(false);
             }
             return this;
         }
